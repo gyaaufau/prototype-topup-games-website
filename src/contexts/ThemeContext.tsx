@@ -37,7 +37,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         // Update CSS variables based on theme
         const root = document.documentElement;
         if (theme === 'pink') {
-            // Pink/Purple theme (matching main branch design)
+            // Pink/Purple theme (matching main branch exactly)
             root.style.setProperty('--color-primary', '#ec4899');        // pink-500
             root.style.setProperty('--color-primary-hover', '#db2777');  // pink-600
             root.style.setProperty('--color-primary-light', '#f472b6');  // pink-400
@@ -45,11 +45,11 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
             root.style.setProperty('--color-bg-main', '#020617');        // slate-950
             root.style.setProperty('--color-bg-card', '#0f172a');        // slate-900
             root.style.setProperty('--color-bg-secondary', '#1e293b');   // slate-800
-            root.style.setProperty('--color-border', '#334155');         // slate-700
+            root.style.setProperty('--color-border', '#1e293b');         // slate-800
             // RGB values
-            root.style.setProperty('--color-primary-rgb', '236, 72, 153');
-            root.style.setProperty('--color-bg-main-rgb', '2, 6, 23');
-            root.style.setProperty('--color-bg-card-rgb', '15, 23, 42');
+            root.style.setProperty('--color-primary-rgb', '236, 72, 153');     // pink-500
+            root.style.setProperty('--color-bg-main-rgb', '2, 6, 23');         // slate-950
+            root.style.setProperty('--color-bg-card-rgb', '15, 23, 42');       // slate-900
         } else {
             // Teal/Dark theme
             root.style.setProperty('--color-primary', '#5F9598');
