@@ -1,6 +1,7 @@
 // Mock Data for GyaStore
+import type { Game, Nominal, Payment } from '../types';
 
-export const games = [
+export const games: Game[] = [
     {
         id: 'mobile-legends',
         title: 'Mobile Legends: Bang Bang',
@@ -195,7 +196,7 @@ export const games = [
     }
 ];
 
-export const nominals = [
+export const nominals: Nominal[] = [
     { id: 1, amount: '5 Diamonds', price: 1500, bonus: 0 },
     { id: 2, amount: '12 Diamonds', price: 3500, bonus: 1 },
     { id: 3, amount: '28 Diamonds', price: 8500, bonus: 3 },
@@ -210,7 +211,7 @@ export const nominals = [
     { id: 12, amount: '4000 Diamonds', price: 1075000, bonus: 420 }
 ];
 
-export const payments = [
+export const payments: Payment[] = [
     {
         id: 'gopay',
         name: 'GoPay',

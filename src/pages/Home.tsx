@@ -2,18 +2,19 @@ import { Link } from 'react-router-dom';
 import { games } from '../data/mockData';
 import { ChevronLeft, ChevronRight, Star, TrendingUp, Zap, Shield, Loader2 } from 'lucide-react';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import type { Slide, Game } from '../types';
 
 const Home = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [displayedGames, setDisplayedGames] = useState([]);
-    const [page, setPage] = useState(1);
-    const [loading, setLoading] = useState(false);
-    const [hasMore, setHasMore] = useState(true);
-    const observerTarget = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState<number>(0);
+    const [displayedGames, setDisplayedGames] = useState<Game[]>([]);
+    const [page, setPage] = useState<number>(1);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [hasMore, setHasMore] = useState<boolean>(true);
+    const observerTarget = useRef<HTMLDivElement>(null);
 
     const GAMES_PER_PAGE = 12;
 
-    const slides = [
+    const slides: Slide[] = [
         {
             id: 1,
             title: 'Special Event!',

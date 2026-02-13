@@ -3,7 +3,7 @@ import { Search, Menu, X, Gamepad2 } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     return (
         <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-lg">

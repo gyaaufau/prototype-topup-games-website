@@ -1,12 +1,13 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { CheckCircle2, Download, Share2, Home, ArrowLeft, Copy, Check } from 'lucide-react';
+import { CheckCircle2, Download, Share2, Home, Copy, Check } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import type { OrderData } from '../types';
 
 const Invoice = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const [copied, setCopied] = useState(false);
-    const orderData = location.state?.orderData;
+    const [copied, setCopied] = useState<boolean>(false);
+    const orderData = location.state?.orderData as OrderData | undefined;
 
     useEffect(() => {
         // If no order data, redirect to home

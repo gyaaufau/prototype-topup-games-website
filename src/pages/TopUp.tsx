@@ -2,14 +2,22 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { games, nominals, payments } from '../data/mockData';
 import { useState } from 'react';
 import { ArrowLeft, Info, CheckCircle2, CreditCard } from 'lucide-react';
+import type { Nominal, Payment } from '../types';
+
+interface FormData {
+    userId: string;
+    serverId: string;
+    selectedNominal: Nominal | null;
+    selectedPayment: Payment | null;
+}
 
 const TopUp = () => {
-    const { id } = useParams();
+    const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 
     const game = games.find((g) => g.id === id);
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         userId: '',
         serverId: '',
         selectedNominal: null,
@@ -32,14 +40,14 @@ const TopUp = () => {
         );
     }
 
-    const handleNominalClick = (nominal) => {
+    const handleNominalClick = (nominal: Nominal) => {
         setFormData((prev) => ({
             ...prev,
             selectedNominal: prev.selectedNominal?.id === nominal.id ? null : nominal
         }));
     };
 
-    const handlePaymentClick = (payment) => {
+    const handlePaymentClick = (payment: Payment) => {
         setFormData((prev) => ({
             ...prev,
             selectedPayment: prev.selectedPayment?.id === payment.id ? null : payment
