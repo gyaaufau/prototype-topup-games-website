@@ -37,19 +37,19 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         // Update CSS variables based on theme
         const root = document.documentElement;
         if (theme === 'pink') {
-            // Pink/Purple vibrant theme
-            root.style.setProperty('--color-primary', '#ec4899');        // Hot pink
-            root.style.setProperty('--color-primary-hover', '#db2777');  // Darker pink
-            root.style.setProperty('--color-primary-light', '#f9a8d4');  // Light pink
-            root.style.setProperty('--color-secondary', '#a855f7');      // Purple (lighter than before)
-            root.style.setProperty('--color-bg-main', '#1a0b2e');        // Deep purple-black
-            root.style.setProperty('--color-bg-card', '#2d1b4e');        // Dark purple
-            root.style.setProperty('--color-bg-secondary', '#3d2b5e');   // Medium purple
-            root.style.setProperty('--color-border', '#6d28d9');         // Vibrant purple border
+            // Pink/Purple theme (matching main branch design)
+            root.style.setProperty('--color-primary', '#ec4899');        // pink-500
+            root.style.setProperty('--color-primary-hover', '#db2777');  // pink-600
+            root.style.setProperty('--color-primary-light', '#f472b6');  // pink-400
+            root.style.setProperty('--color-secondary', '#a855f7');      // purple-500
+            root.style.setProperty('--color-bg-main', '#020617');        // slate-950
+            root.style.setProperty('--color-bg-card', '#0f172a');        // slate-900
+            root.style.setProperty('--color-bg-secondary', '#1e293b');   // slate-800
+            root.style.setProperty('--color-border', '#334155');         // slate-700
             // RGB values
             root.style.setProperty('--color-primary-rgb', '236, 72, 153');
-            root.style.setProperty('--color-bg-main-rgb', '26, 11, 46');
-            root.style.setProperty('--color-bg-card-rgb', '45, 27, 78');
+            root.style.setProperty('--color-bg-main-rgb', '2, 6, 23');
+            root.style.setProperty('--color-bg-card-rgb', '15, 23, 42');
         } else {
             // Teal/Dark theme
             root.style.setProperty('--color-primary', '#5F9598');
