@@ -1,21 +1,34 @@
 import { Link } from 'react-router-dom';
 import { Search, Menu, X, Gamepad2 } from 'lucide-react';
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     return (
-        <nav className="bg-[#061E29]/95 backdrop-blur-md border-b border-[#1D546D] sticky top-0 z-50 shadow-lg">
+        <nav
+            className="backdrop-blur-md border-b sticky top-0 z-50 shadow-lg"
+            style={{
+                backgroundColor: 'rgba(var(--color-bg-main-rgb, 6, 30, 41), 0.95)',
+                borderColor: 'var(--color-border)'
+            }}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 sm:h-20">
                     {/* Logo */}
                     <Link to="/" className="shrink-0 group">
                         <div className="flex items-center gap-2">
-                            <div className="bg-gradient-to-br from-[#5F9598] to-[#1D546D] p-2 rounded-lg group-hover:scale-110 transition-transform">
+                            <div
+                                className="p-2 rounded-lg group-hover:scale-110 transition-transform"
+                                style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)' }}
+                            >
                                 <Gamepad2 className="w-6 h-6 text-white" />
                             </div>
-                            <span className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-[#5F9598] to-[#1D546D] bg-clip-text text-transparent">
+                            <span
+                                className="text-2xl sm:text-3xl font-black bg-clip-text text-transparent"
+                                style={{ backgroundImage: 'linear-gradient(to right, var(--color-primary), var(--color-secondary))' }}
+                            >
                                 GyaStore
                             </span>
                         </div>
@@ -27,16 +40,36 @@ const Navbar = () => {
                             <input
                                 type="text"
                                 placeholder="Search your favorite games..."
-                                className="w-full bg-[#1D546D] text-white placeholder-slate-400 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] focus:bg-[#0f3447] transition-all border border-[#0f3447] hover:border-[#1D546D]"
+                                className="w-full text-white placeholder-slate-400 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:ring-2 transition-all border"
+                                style={{
+                                    backgroundColor: 'var(--color-secondary)',
+                                    borderColor: 'var(--color-bg-secondary)'
+                                }}
+                                onFocus={(e) => {
+                                    e.currentTarget.style.borderColor = 'var(--color-primary)';
+                                    e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
+                                }}
+                                onBlur={(e) => {
+                                    e.currentTarget.style.borderColor = 'var(--color-bg-secondary)';
+                                    e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
+                                }}
                             />
-                            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5 group-focus-within:text-[#5F9598]" />
+                            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5 group-focus-within:text-[var(--color-primary)]" />
                         </div>
                     </div>
 
                     {/* Right Section */}
                     <div className="flex items-center gap-3">
+                        {/* Theme Toggle */}
+                        <ThemeToggle />
+
                         {/* Login Button - Desktop */}
-                        <button className="hidden sm:flex items-center gap-2 bg-[#5F9598] hover:bg-[#47878a] text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-[#5F9598]/30 hover:scale-105">
+                        <button
+                            className="hidden sm:flex items-center gap-2 text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
+                            style={{ backgroundColor: 'var(--color-primary)' }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary-hover)'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                        >
                             <span>Login</span>
                         </button>
 
@@ -58,13 +91,24 @@ const Navbar = () => {
                             <input
                                 type="text"
                                 placeholder="Search games..."
-                                className="w-full bg-[#1D546D] text-white placeholder-slate-400 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447]"
+                                className="w-full text-white placeholder-slate-400 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:ring-2 border"
+                                style={{
+                                    backgroundColor: 'var(--color-secondary)',
+                                    borderColor: 'var(--color-bg-secondary)'
+                                }}
+                                onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
+                                onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-bg-secondary)'}
                             />
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                         </div>
 
                         {/* Mobile Login Button */}
-                        <button className="w-full bg-[#5F9598] hover:bg-[#47878a] text-white font-bold py-3 rounded-xl transition-all duration-200">
+                        <button
+                            className="w-full text-white font-bold py-3 rounded-xl transition-all duration-200"
+                            style={{ backgroundColor: 'var(--color-primary)' }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary-hover)'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                        >
                             Login
                         </button>
                     </div>

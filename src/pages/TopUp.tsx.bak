@@ -103,7 +103,7 @@ const TopUp = () => {
                     {/* Left Column - Game Info & Instructions */}
                     <div className="lg:col-span-1 space-y-4 sm:space-y-6">
                         {/* Game Info Card */}
-                        <div className=" rounded-xl sm:rounded-2xl border border overflow-hidden shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                        <div className=" rounded-xl sm:rounded-2xl border border-[#1D546D] overflow-hidden shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 <img
                                     src={game.image}
@@ -123,7 +123,7 @@ const TopUp = () => {
                         </div>
 
                         {/* Instructions Card */}
-                        <div className=" rounded-xl sm:rounded-2xl border border p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                        <div className=" rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                             <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2 mb-4">
                                 <div className="bg-gradient-to-br from-[#5F9598] to-[#1D546D] p-1.5 rounded-lg">
                                     <Info className="w-4 h-4 text-white" />
@@ -162,7 +162,7 @@ const TopUp = () => {
                     {/* Right Column - Form */}
                     <div className="lg:col-span-2 space-y-4 sm:space-y-6">
                         {/* Input Section */}
-                        <div className=" rounded-xl sm:rounded-2xl border border p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                        <div className=" rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
                                 <div className="w-2 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
                                 Account Information
@@ -179,7 +179,7 @@ const TopUp = () => {
                                             setFormData({ ...formData, userId: e.target.value })
                                         }
                                         placeholder="Enter User ID"
-                                        className="w-full  text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447] hover:border transition-all" style={{ backgroundColor: "var(--color-secondary)" }}
+                                        className="w-full  text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447] hover:border-[#1D546D] transition-all" style={{ backgroundColor: "var(--color-secondary)" }}
                                     />
                                 </div>
                                 <div>
@@ -193,14 +193,14 @@ const TopUp = () => {
                                             setFormData({ ...formData, serverId: e.target.value })
                                         }
                                         placeholder="Enter Server ID"
-                                        className="w-full  text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447] hover:border transition-all" style={{ backgroundColor: "var(--color-secondary)" }}
+                                        className="w-full  text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447] hover:border-[#1D546D] transition-all" style={{ backgroundColor: "var(--color-secondary)" }}
                                     />
                                 </div>
                             </div>
                         </div>
 
                         {/* Nominal Section */}
-                        <div className=" rounded-xl sm:rounded-2xl border border p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                        <div className=" rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
                                 <div className="w-2 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
                                 Select Nominal
@@ -212,7 +212,7 @@ const TopUp = () => {
                                         onClick={() => handleNominalClick(nominal)}
                                         className={`bg-[#1D546D] hover:bg-[#0f3447] rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 relative overflow-hidden ${formData.selectedNominal?.id === nominal.id
                                             ? 'border-[#5F9598] shadow-lg shadow-[#5F9598]/20'
-                                            : 'border-[#0f3447] hover:border'
+                                            : 'border-[#0f3447] hover:border-[#1D546D]'
                                             }`}
                                     >
                                         {formData.selectedNominal?.id === nominal.id && (
@@ -237,7 +237,7 @@ const TopUp = () => {
                         </div>
 
                         {/* Payment Section */}
-                        <div className=" rounded-xl sm:rounded-2xl border border p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                        <div className=" rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
                                 <div className="w-2 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
                                 Payment Method
@@ -258,7 +258,7 @@ const TopUp = () => {
                                                         onClick={() => handlePaymentClick(payment)}
                                                         className={`bg-[#1D546D] hover:bg-[#0f3447] rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 flex items-center gap-3 relative ${formData.selectedPayment?.id === payment.id
                                                             ? 'border-[#5F9598] shadow-lg shadow-[#5F9598]/20'
-                                                            : 'border-[#0f3447] hover:border'
+                                                            : 'border-[#0f3447] hover:border-[#1D546D]'
                                                             }`}
                                                     >
                                                         {formData.selectedPayment?.id === payment.id && (
@@ -279,7 +279,7 @@ const TopUp = () => {
                         </div>
 
                         {/* Order Summary - Desktop */}
-                        <div className="hidden md:block  rounded-xl sm:rounded-2xl border border p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                        <div className="hidden md:block  rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4">Order Summary</h3>
                             <div className="space-y-3">
                                 <div className="flex justify-between text-sm">
@@ -298,7 +298,7 @@ const TopUp = () => {
                                         <span className="text-white font-medium">{formData.selectedPayment.name}</span>
                                     </div>
                                 )}
-                                <div className="border-t border pt-3 mt-3">
+                                <div className="border-t border-[#1D546D] pt-3 mt-3">
                                     <div className="flex justify-between items-center">
                                         <span className="text-slate-300 font-semibold">Total</span>
                                         <span className="text-[#75bdc3] font-black text-xl sm:text-2xl">
@@ -322,7 +322,7 @@ const TopUp = () => {
             </div>
 
             {/* Sticky Bottom Bar (Mobile Only) */}
-            <div className="fixed bottom-0 left-0 right-0 /95 backdrop-blur-md border-t border p-4 md:hidden z-50 shadow-2xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
+            <div className="fixed bottom-0 left-0 right-0 /95 backdrop-blur-md border-t border-[#1D546D] p-4 md:hidden z-50 shadow-2xl" style={{ backgroundColor: "var(--color-bg-card)" }}>
                 <div className="flex items-center justify-between gap-4 max-w-7xl mx-auto">
                     <div className="flex-1">
                         <p className="text-slate-400 text-xs mb-1">Total Price</p>

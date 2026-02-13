@@ -70,7 +70,7 @@ const Invoice = () => {
                 </div>
 
                 {/* Invoice Card */}
-                <div className=" rounded-2xl border border overflow-hidden shadow-2xl mb-6" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                <div className=" rounded-2xl border border-[#1D546D] overflow-hidden shadow-2xl mb-6" style={{ backgroundColor: "var(--color-bg-card)" }}>
                     {/* Header */}
                     <div className="bg-gradient-to-r from-[#5F9598] to-[#1D546D] p-6 sm:p-8">
                         <div className="flex items-start justify-between">
@@ -117,31 +117,31 @@ const Invoice = () => {
                                 Order Details
                             </h3>
                             <div className="space-y-3">
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b border-[#1D546D] pb-3">
                                     <span className="text-slate-400 text-sm">Game</span>
                                     <span className="text-white font-semibold text-sm text-right">
                                         {orderData.game}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b border-[#1D546D] pb-3">
                                     <span className="text-slate-400 text-sm">Item</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.item}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b border-[#1D546D] pb-3">
                                     <span className="text-slate-400 text-sm">User ID</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.userId}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b border-[#1D546D] pb-3">
                                     <span className="text-slate-400 text-sm">Server ID</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.serverId}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b border-[#1D546D] pb-3">
                                     <span className="text-slate-400 text-sm">Payment Method</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.payment}
@@ -192,7 +192,7 @@ const Invoice = () => {
                     </div>
 
                     {/* Footer */}
-                    <div className="/30 p-6 sm:p-8 border-t border" style={{ backgroundColor: "var(--color-secondary)" }}>
+                    <div className="/30 p-6 sm:p-8 border-t border-[#1D546D]" style={{ backgroundColor: "var(--color-secondary)" }}>
                         <p className="text-slate-400 text-xs text-center">
                             Thank you for shopping at GyaStore! If you have any questions, please contact our customer service.
                         </p>
@@ -203,14 +203,14 @@ const Invoice = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
                     <button
                         onClick={handleDownload}
-                        className="flex items-center justify-center gap-2 bg-[#1D546D] hover: text-white font-semibold py-3 px-4 rounded-xl transition-all border border-[#0f3447] hover:border" style={{ backgroundColor: "var(--color-secondary)" }}
+                        className="flex items-center justify-center gap-2 bg-[#1D546D] hover: text-white font-semibold py-3 px-4 rounded-xl transition-all border border-[#0f3447] hover:border-[#1D546D]" style={{ backgroundColor: "var(--color-secondary)" }}
                     >
                         <Download className="w-5 h-5" />
                         <span>Download</span>
                     </button>
                     <button
                         onClick={handleShare}
-                        className="flex items-center justify-center gap-2 bg-[#1D546D] hover: text-white font-semibold py-3 px-4 rounded-xl transition-all border border-[#0f3447] hover:border" style={{ backgroundColor: "var(--color-secondary)" }}
+                        className="flex items-center justify-center gap-2 bg-[#1D546D] hover: text-white font-semibold py-3 px-4 rounded-xl transition-all border border-[#0f3447] hover:border-[#1D546D]" style={{ backgroundColor: "var(--color-secondary)" }}
                     >
                         <Share2 className="w-5 h-5" />
                         <span>Share</span>
@@ -225,7 +225,7 @@ const Invoice = () => {
                 </div>
 
                 {/* Additional Info */}
-                <div className="/50 backdrop-blur-sm border border rounded-xl p-4 sm:p-6" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                <div className="/50 backdrop-blur-sm border border-[#1D546D] rounded-xl p-4 sm:p-6" style={{ backgroundColor: "var(--color-bg-card)" }}>
                     <h4 className="text-white font-bold text-sm mb-3">📢 Important Notes:</h4>
                     <ul className="space-y-2 text-slate-400 text-xs sm:text-sm">
                         <li className="flex items-start gap-2">

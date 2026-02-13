@@ -109,7 +109,9 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#061E29] via-[#061E29] to-[#061E29]">
+        <div className="min-h-screen bg-gradient-to-b" style={{
+            backgroundImage: 'linear-gradient(to bottom, var(--color-bg-main), var(--color-bg-main), var(--color-bg-main))'
+        }}>
             {/* Hero Section with Carousel */}
             <section className="relative overflow-hidden">
                 <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
@@ -122,26 +124,44 @@ const Home = () => {
                             {/* Background Image with Overlay */}
                             <div className="absolute inset-0">
                                 <div className={`absolute inset-0 bg-gradient-to-r ${slide.gradient} opacity-90`} />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#061E29] via-[#061E29]/50 to-transparent" />
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-t"
+                                    style={{
+                                        backgroundImage: 'linear-gradient(to top, var(--color-bg-main), rgba(var(--color-bg-main-rgb, 6, 30, 41), 0.5), transparent)'
+                                    }}
+                                />
                             </div>
 
                             {/* Content */}
                             <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
                                 <div className="text-white max-w-2xl animate-fade-in">
-                                    <div className="inline-flex items-center gap-2 bg-[#5F9598]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-[#5F9598]/30">
-                                        <Zap className="w-4 h-4 text-[#75bdc3]" />
-                                        <span className="text-[#a3d3d7] text-sm font-semibold">Limited Offer</span>
+                                    <div
+                                        className="inline-flex items-center gap-2 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border"
+                                        style={{
+                                            backgroundColor: 'rgba(var(--color-primary-rgb, 95, 149, 152), 0.2)',
+                                            borderColor: 'rgba(var(--color-primary-rgb, 95, 149, 152), 0.3)'
+                                        }}
+                                    >
+                                        <Zap className="w-4 h-4" style={{ color: 'var(--color-primary-light)' }} />
+                                        <span className="text-sm font-semibold" style={{ color: 'var(--color-primary-light)' }}>Limited Offer</span>
                                     </div>
                                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 leading-tight">
                                         {slide.title}
                                     </h2>
-                                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#75bdc3] mb-4">
+                                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'var(--color-primary-light)' }}>
                                         {slide.subtitle}
                                     </h3>
                                     <p className="text-slate-200 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed">
                                         {slide.description}
                                     </p>
-                                    <button className="group bg-[#5F9598] hover:bg-[#47878a] text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-2xl hover:shadow-[#5F9598]/50 hover:scale-105 inline-flex items-center gap-2">
+                                    <button
+                                        className="group text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-2xl hover:scale-105 inline-flex items-center gap-2"
+                                        style={{
+                                            backgroundColor: 'var(--color-primary)',
+                                        }}
+                                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary-hover)'}
+                                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                                    >
                                         <span>Top Up Now</span>
                                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </button>
@@ -184,22 +204,55 @@ const Home = () => {
             {/* Features Section */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-                    <div className="bg-[#0a2838]/50 backdrop-blur-sm border border-[#1D546D] rounded-xl p-6 hover:border-[#5F9598]/50 transition-all">
-                        <div className="bg-gradient-to-br from-[#5F9598] to-[#1D546D] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        className="backdrop-blur-sm border rounded-xl p-6 transition-all"
+                        style={{
+                            backgroundColor: 'rgba(var(--color-bg-card-rgb, 10, 40, 56), 0.5)',
+                            borderColor: 'var(--color-border)'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgba(var(--color-primary-rgb, 95, 149, 152), 0.5)'}
+                        onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                    >
+                        <div
+                            className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)' }}
+                        >
                             <Zap className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-white font-bold text-lg mb-2">Instant Delivery</h3>
                         <p className="text-slate-400 text-sm">Get your items delivered within seconds after payment confirmation</p>
                     </div>
-                    <div className="bg-[#0a2838]/50 backdrop-blur-sm border border-[#1D546D] rounded-xl p-6 hover:border-[#5F9598]/50 transition-all">
-                        <div className="bg-gradient-to-br from-blue-500 to-cyan-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        className="backdrop-blur-sm border rounded-xl p-6 transition-all"
+                        style={{
+                            backgroundColor: 'rgba(var(--color-bg-card-rgb, 10, 40, 56), 0.5)',
+                            borderColor: 'var(--color-border)'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgba(var(--color-primary-rgb, 95, 149, 152), 0.5)'}
+                        onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                    >
+                        <div
+                            className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)' }}
+                        >
                             <Shield className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-white font-bold text-lg mb-2">100% Secure</h3>
                         <p className="text-slate-400 text-sm">Your data and transactions are protected with advanced security</p>
                     </div>
-                    <div className="bg-[#0a2838]/50 backdrop-blur-sm border border-[#1D546D] rounded-xl p-6 hover:border-[#5F9598]/50 transition-all">
-                        <div className="bg-gradient-to-br from-green-500 to-emerald-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        className="backdrop-blur-sm border rounded-xl p-6 transition-all"
+                        style={{
+                            backgroundColor: 'rgba(var(--color-bg-card-rgb, 10, 40, 56), 0.5)',
+                            borderColor: 'var(--color-border)'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgba(var(--color-primary-rgb, 95, 149, 152), 0.5)'}
+                        onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                    >
+                        <div
+                            className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style={{ background: 'linear-gradient(135deg, #22c55e 0%, #10b981 100%)' }}
+                        >
                             <TrendingUp className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-white font-bold text-lg mb-2">Best Price</h3>
@@ -213,7 +266,7 @@ const Home = () => {
                 <div className="flex items-center justify-between mb-6 sm:mb-8">
                     <div>
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2 flex items-center gap-3">
-                            <Star className="w-6 h-6 sm:w-8 sm:h-8 text-[#75bdc3] fill-[#75bdc3]" />
+                            <Star className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: 'var(--color-primary-light)', fill: 'var(--color-primary-light)' }} />
                             Popular Games
                         </h2>
                         <p className="text-slate-400 text-sm sm:text-base">
@@ -230,9 +283,18 @@ const Home = () => {
                             className="group cursor-pointer animate-fade-in"
                             style={{ animationDelay: `${(index % GAMES_PER_PAGE) * 50}ms` }}
                         >
-                            <div className="bg-[#0a2838] rounded-xl sm:rounded-2xl overflow-hidden border border-[#1D546D] hover:border-[#5F9598] transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#5F9598]/20 card-hover">
+                            <div
+                                className="rounded-xl sm:rounded-2xl overflow-hidden border transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl card-hover"
+                                style={{
+                                    backgroundColor: 'var(--color-bg-card)',
+                                    borderColor: 'var(--color-border)',
+                                    '--tw-shadow-color': 'rgba(var(--color-primary-rgb, 95, 149, 152), 0.2)'
+                                } as React.CSSProperties}
+                                onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
+                                onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                            >
                                 {/* Game Image */}
-                                <div className="aspect-[3/4] overflow-hidden relative bg-[#1D546D]">
+                                <div className="aspect-[3/4] overflow-hidden relative" style={{ backgroundColor: 'var(--color-secondary)' }}>
                                     <img
                                         src={game.image}
                                         alt={game.title}
@@ -242,15 +304,29 @@ const Home = () => {
                                     {/* Category Badge */}
                                     {game.category && (
                                         <div className="absolute top-2 left-2">
-                                            <span className="bg-[#0a2838]/80 backdrop-blur-sm text-[#75bdc3] text-xs font-semibold px-2 py-1 rounded">
+                                            <span
+                                                className="backdrop-blur-sm text-xs font-semibold px-2 py-1 rounded"
+                                                style={{
+                                                    backgroundColor: 'rgba(var(--color-bg-card-rgb, 10, 40, 56), 0.8)',
+                                                    color: 'var(--color-primary-light)'
+                                                }}
+                                            >
                                                 {game.category}
                                             </span>
                                         </div>
                                     )}
                                     {/* Hover Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#061E29] via-[#061E29]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div
+                                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                        style={{
+                                            background: 'linear-gradient(to top, var(--color-bg-main), rgba(var(--color-bg-main-rgb, 6, 30, 41), 0.4), transparent)'
+                                        }}
+                                    >
                                         <div className="absolute bottom-0 left-0 right-0 p-3 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                            <span className="inline-block bg-[#5F9598] text-white text-xs font-bold px-2 py-1 rounded">
+                                            <span
+                                                className="inline-block text-white text-xs font-bold px-2 py-1 rounded"
+                                                style={{ backgroundColor: 'var(--color-primary)' }}
+                                            >
                                                 Top Up Now
                                             </span>
                                         </div>
@@ -272,7 +348,7 @@ const Home = () => {
                 {/* Loading Indicator */}
                 {loading && (
                     <div className="flex justify-center items-center py-8">
-                        <Loader2 className="w-8 h-8 text-[#5F9598] animate-spin" />
+                        <Loader2 className="w-8 h-8 animate-spin" style={{ color: 'var(--color-primary)' }} />
                         <span className="ml-3 text-slate-400">Loading more games...</span>
                     </div>
                 )}
@@ -292,7 +368,12 @@ const Home = () => {
 
             {/* CTA Section */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-                <div className="bg-gradient-to-r from-[#5F9598] via-[#1D546D] to-[#061E29] rounded-2xl sm:rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+                <div
+                    className="rounded-2xl sm:rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden"
+                    style={{
+                        background: 'linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-bg-main))'
+                    }}
+                >
                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
                     <div className="relative z-10">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 sm:mb-4">

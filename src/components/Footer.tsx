@@ -3,47 +3,73 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#061E29] border-t border-[#1D546D] mt-auto">
+        <footer
+            className="border-t mt-auto"
+            style={{
+                backgroundColor: 'var(--color-bg-main)',
+                borderColor: 'var(--color-border)'
+            }}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     {/* Brand Section */}
-                    <div className="space-y-4">                    <Link to="/" className="inline-flex items-center gap-2 group">
-                        <div className="bg-gradient-to-br from-[#5F9598] to-[#1D546D] p-2 rounded-lg group-hover:scale-110 transition-transform">
-                            <Gamepad2 className="w-5 h-5 text-white" />
-                        </div>
-                        <span className="text-xl font-black bg-gradient-to-r from-[#5F9598] to-[#1D546D] bg-clip-text text-transparent">
-                            GyaStore
-                        </span>
-                    </Link>
+                    <div className="space-y-4">
+                        <Link to="/" className="inline-flex items-center gap-2 group">
+                            <div
+                                className="p-2 rounded-lg group-hover:scale-110 transition-transform"
+                                style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)' }}
+                            >
+                                <Gamepad2 className="w-5 h-5 text-white" />
+                            </div>
+                            <span
+                                className="text-xl font-black bg-clip-text text-transparent"
+                                style={{ backgroundImage: 'linear-gradient(to right, var(--color-primary), var(--color-secondary))' }}
+                            >
+                                GyaStore
+                            </span>
+                        </Link>
                         <p className="text-slate-400 text-sm leading-relaxed">
                             Your trusted platform for game top-up. Fast, secure, and reliable service 24/7.
                         </p>
                         {/* Social Links */}
-                        <div className="flex items-center gap-3">                        <a
-                            href="#"
-                            className="bg-[#1D546D] hover:bg-[#5F9598] text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
-                            aria-label="Facebook"
-                        >
-                            <Facebook className="w-4 h-4" />
-                        </a>
+                        <div className="flex items-center gap-3">
                             <a
                                 href="#"
-                                className="bg-[#1D546D] hover:bg-[#5F9598] text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                className="text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                style={{ backgroundColor: 'var(--color-secondary)' }}
+                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-secondary)'}
+                                aria-label="Facebook"
+                            >
+                                <Facebook className="w-4 h-4" />
+                            </a>
+                            <a
+                                href="#"
+                                className="text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                style={{ backgroundColor: 'var(--color-secondary)' }}
+                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-secondary)'}
                                 aria-label="Twitter"
                             >
                                 <Twitter className="w-4 h-4" />
                             </a>
                             <a
                                 href="#"
-                                className="bg-[#1D546D] hover:bg-[#5F9598] text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                className="text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                style={{ backgroundColor: 'var(--color-secondary)' }}
+                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-secondary)'}
                                 aria-label="Instagram"
                             >
                                 <Instagram className="w-4 h-4" />
                             </a>
                             <a
                                 href="#"
-                                className="bg-[#1D546D] hover:bg-[#5F9598] text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                className="text-slate-400 hover:text-white p-2.5 rounded-lg transition-all duration-200 hover:scale-110"
+                                style={{ backgroundColor: 'var(--color-secondary)' }}
+                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
+                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-secondary)'}
                                 aria-label="Github"
                             >
                                 <Github className="w-4 h-4" />
@@ -56,22 +82,22 @@ const Footer = () => {
                         <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link to="/" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <Link to="/" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     All Games
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     Promotions
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     About Us
                                 </a>
                             </li>
@@ -83,22 +109,22 @@ const Footer = () => {
                         <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Support</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     FAQ
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     How to Order
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     Terms & Conditions
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors text-sm">
+                                <a href="#" className="text-slate-400 transition-colors text-sm hover:text-[var(--color-primary-light)]">
                                     Privacy Policy
                                 </a>
                             </li>
