@@ -8,7 +8,7 @@ import Invoice from './pages/Invoice.tsx';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-slate-950">
+      <div className="min-h-screen flex flex-col bg-[#061E29]">
         <Navbar />
         <main className="grow">
           <Routes>

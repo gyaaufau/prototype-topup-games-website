@@ -8,7 +8,7 @@ body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #020617;
+    background-color: #061E29;
     overflow-x: hidden;
 }
 
@@ -18,16 +18,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #061E29;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #334155;
+    background: #1D546D;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
+    background: #5F9598;
 }
 
 /* Animation utilities */
@@ -49,14 +49,14 @@ body {
 
 /* Glass effect */
 .glass-effect {
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(10, 40, 56, 0.7);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(51, 65, 85, 0.5);
+    border: 1px solid rgba(95, 149, 152, 0.3);
 }
 
 /* Gradient text */
 .gradient-text {
-    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #5F9598 0%, #1D546D 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -26,12 +26,12 @@ const TopUp = () => {
 
     if (!game) {
         return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+            <div className="min-h-screen bg-[#061E29] flex items-center justify-center p-4">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold text-white mb-4">Game Not Found</h2>
                     <button
                         onClick={() => navigate('/')}
-                        className="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-xl transition-all"
+                        className="bg-[#5F9598] hover:bg-[#47878a] text-white font-bold px-6 py-3 rounded-xl transition-all"
                     >
                         Back to Home
                     </button>
@@ -85,7 +85,7 @@ const TopUp = () => {
     const totalPrice = formData.selectedNominal?.price || 0;
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pb-24 md:pb-8">
+        <div className="min-h-screen bg-gradient-to-b from-[#061E29] via-[#061E29] to-[#061E29] pb-24 md:pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
                 {/* Back Button */}
                 <button
@@ -100,14 +100,14 @@ const TopUp = () => {
                     {/* Left Column - Game Info & Instructions */}
                     <div className="lg:col-span-1 space-y-4 sm:space-y-6">
                         {/* Game Info Card */}
-                        <div className="bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-800 overflow-hidden shadow-xl">
+                        <div className="bg-[#0a2838] rounded-xl sm:rounded-2xl border border-[#1D546D] overflow-hidden shadow-xl">
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 <img
                                     src={game.image}
                                     alt={game.title}
                                     className="w-full h-full object-cover"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#061E29] via-transparent to-transparent"></div>
                             </div>
                             <div className="p-4 sm:p-6">
                                 <h2 className="text-xl sm:text-2xl font-black text-white mb-1">{game.title}</h2>
@@ -120,34 +120,34 @@ const TopUp = () => {
                         </div>
 
                         {/* Instructions Card */}
-                        <div className="bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-xl">
+                        <div className="bg-[#0a2838] rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl">
                             <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2 mb-4">
-                                <div className="bg-gradient-to-br from-pink-500 to-purple-500 p-1.5 rounded-lg">
+                                <div className="bg-gradient-to-br from-[#5F9598] to-[#1D546D] p-1.5 rounded-lg">
                                     <Info className="w-4 h-4 text-white" />
                                 </div>
                                 How to Top Up
                             </h3>
                             <ol className="space-y-3 text-slate-300 text-sm">
                                 <li className="flex gap-3">
-                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-full flex items-center justify-center font-bold text-xs">
+                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-[#5F9598] to-[#1D546D] text-white rounded-full flex items-center justify-center font-bold text-xs">
                                         1
                                     </span>
                                     <span>Enter your User ID and Server ID</span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-full flex items-center justify-center font-bold text-xs">
+                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-[#5F9598] to-[#1D546D] text-white rounded-full flex items-center justify-center font-bold text-xs">
                                         2
                                     </span>
                                     <span>Select the nominal amount you want</span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-full flex items-center justify-center font-bold text-xs">
+                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-[#5F9598] to-[#1D546D] text-white rounded-full flex items-center justify-center font-bold text-xs">
                                         3
                                     </span>
                                     <span>Choose your payment method</span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-full flex items-center justify-center font-bold text-xs">
+                                    <span className="shrink-0 w-6 h-6 bg-gradient-to-br from-[#5F9598] to-[#1D546D] text-white rounded-full flex items-center justify-center font-bold text-xs">
                                         4
                                     </span>
                                     <span>Click "Buy Now" to complete your order</span>
@@ -159,9 +159,9 @@ const TopUp = () => {
                     {/* Right Column - Form */}
                     <div className="lg:col-span-2 space-y-4 sm:space-y-6">
                         {/* Input Section */}
-                        <div className="bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-xl">
+                        <div className="bg-[#0a2838] rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl">
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <div className="w-2 h-6 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full"></div>
+                                <div className="w-2 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
                                 Account Information
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -176,7 +176,7 @@ const TopUp = () => {
                                             setFormData({ ...formData, userId: e.target.value })
                                         }
                                         placeholder="Enter User ID"
-                                        className="w-full bg-slate-800 text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 border border-slate-700 hover:border-slate-600 transition-all"
+                                        className="w-full bg-[#1D546D] text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447] hover:border-[#1D546D] transition-all"
                                     />
                                 </div>
                                 <div>
@@ -190,16 +190,16 @@ const TopUp = () => {
                                             setFormData({ ...formData, serverId: e.target.value })
                                         }
                                         placeholder="Enter Server ID"
-                                        className="w-full bg-slate-800 text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 border border-slate-700 hover:border-slate-600 transition-all"
+                                        className="w-full bg-[#1D546D] text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#5F9598] border border-[#0f3447] hover:border-[#1D546D] transition-all"
                                     />
                                 </div>
                             </div>
                         </div>
 
                         {/* Nominal Section */}
-                        <div className="bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-xl">
+                        <div className="bg-[#0a2838] rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl">
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <div className="w-2 h-6 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full"></div>
+                                <div className="w-2 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
                                 Select Nominal
                             </h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
@@ -207,20 +207,20 @@ const TopUp = () => {
                                     <button
                                         key={nominal.id}
                                         onClick={() => handleNominalClick(nominal)}
-                                        className={`bg-slate-800 hover:bg-slate-750 rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 relative overflow-hidden ${formData.selectedNominal?.id === nominal.id
-                                            ? 'border-pink-500 shadow-lg shadow-pink-500/20'
-                                            : 'border-slate-700 hover:border-slate-600'
+                                        className={`bg-[#1D546D] hover:bg-[#0f3447] rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 relative overflow-hidden ${formData.selectedNominal?.id === nominal.id
+                                            ? 'border-[#5F9598] shadow-lg shadow-[#5F9598]/20'
+                                            : 'border-[#0f3447] hover:border-[#1D546D]'
                                             }`}
                                     >
                                         {formData.selectedNominal?.id === nominal.id && (
                                             <div className="absolute top-2 right-2">
-                                                <CheckCircle2 className="w-4 h-4 text-pink-500 fill-pink-500" />
+                                                <CheckCircle2 className="w-4 h-4 text-[#5F9598] fill-[#5F9598]" />
                                             </div>
                                         )}
                                         <div className="text-white font-bold text-xs sm:text-sm mb-1">
                                             {nominal.amount}
                                         </div>
-                                        <div className="text-pink-400 font-bold text-sm sm:text-base">
+                                        <div className="text-[#75bdc3] font-bold text-sm sm:text-base">
                                             Rp {nominal.price.toLocaleString('id-ID')}
                                         </div>
                                         {nominal.bonus > 0 && (
@@ -234,9 +234,9 @@ const TopUp = () => {
                         </div>
 
                         {/* Payment Section */}
-                        <div className="bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-xl">
+                        <div className="bg-[#0a2838] rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl">
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <div className="w-2 h-6 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full"></div>
+                                <div className="w-2 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
                                 Payment Method
                             </h3>
                             <div className="space-y-4">
@@ -253,14 +253,14 @@ const TopUp = () => {
                                                     <button
                                                         key={payment.id}
                                                         onClick={() => handlePaymentClick(payment)}
-                                                        className={`bg-slate-800 hover:bg-slate-750 rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 flex items-center gap-3 relative ${formData.selectedPayment?.id === payment.id
-                                                            ? 'border-pink-500 shadow-lg shadow-pink-500/20'
-                                                            : 'border-slate-700 hover:border-slate-600'
+                                                        className={`bg-[#1D546D] hover:bg-[#0f3447] rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 flex items-center gap-3 relative ${formData.selectedPayment?.id === payment.id
+                                                            ? 'border-[#5F9598] shadow-lg shadow-[#5F9598]/20'
+                                                            : 'border-[#0f3447] hover:border-[#1D546D]'
                                                             }`}
                                                     >
                                                         {formData.selectedPayment?.id === payment.id && (
                                                             <div className="absolute top-2 right-2">
-                                                                <CheckCircle2 className="w-4 h-4 text-pink-500 fill-pink-500" />
+                                                                <CheckCircle2 className="w-4 h-4 text-[#5F9598] fill-[#5F9598]" />
                                                             </div>
                                                         )}
                                                         <span className="text-2xl">{payment.logo}</span>
@@ -276,7 +276,7 @@ const TopUp = () => {
                         </div>
 
                         {/* Order Summary - Desktop */}
-                        <div className="hidden md:block bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-xl">
+                        <div className="hidden md:block bg-[#0a2838] rounded-xl sm:rounded-2xl border border-[#1D546D] p-5 sm:p-6 shadow-xl">
                             <h3 className="text-base sm:text-lg font-bold text-white mb-4">Order Summary</h3>
                             <div className="space-y-3">
                                 <div className="flex justify-between text-sm">
@@ -295,10 +295,10 @@ const TopUp = () => {
                                         <span className="text-white font-medium">{formData.selectedPayment.name}</span>
                                     </div>
                                 )}
-                                <div className="border-t border-slate-800 pt-3 mt-3">
+                                <div className="border-t border-[#1D546D] pt-3 mt-3">
                                     <div className="flex justify-between items-center">
                                         <span className="text-slate-300 font-semibold">Total</span>
-                                        <span className="text-pink-400 font-black text-xl sm:text-2xl">
+                                        <span className="text-[#75bdc3] font-black text-xl sm:text-2xl">
                                             Rp {totalPrice.toLocaleString('id-ID')}
                                         </span>
                                     </div>
@@ -309,7 +309,7 @@ const TopUp = () => {
                         {/* Buy Now Button - Desktop */}
                         <button
                             onClick={handleBuyNow}
-                            className="hidden md:flex w-full bg-pink-500 hover:bg-pink-600 text-white font-black py-4 rounded-xl transition-all duration-200 text-base sm:text-lg shadow-xl hover:shadow-pink-500/30 hover:scale-[1.02] items-center justify-center gap-2"
+                            className="hidden md:flex w-full bg-[#5F9598] hover:bg-[#47878a] text-white font-black py-4 rounded-xl transition-all duration-200 text-base sm:text-lg shadow-xl hover:shadow-[#5F9598]/30 hover:scale-[1.02] items-center justify-center gap-2"
                         >
                             <CreditCard className="w-5 h-5" />
                             <span>Buy Now</span>
@@ -319,17 +319,17 @@ const TopUp = () => {
             </div>
 
             {/* Sticky Bottom Bar (Mobile Only) */}
-            <div className="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-4 md:hidden z-50 shadow-2xl">
+            <div className="fixed bottom-0 left-0 right-0 bg-[#0a2838]/95 backdrop-blur-md border-t border-[#1D546D] p-4 md:hidden z-50 shadow-2xl">
                 <div className="flex items-center justify-between gap-4 max-w-7xl mx-auto">
                     <div className="flex-1">
                         <p className="text-slate-400 text-xs mb-1">Total Price</p>
-                        <p className="text-pink-400 font-black text-lg sm:text-xl">
+                        <p className="text-[#75bdc3] font-black text-lg sm:text-xl">
                             {totalPrice > 0 ? `Rp ${totalPrice.toLocaleString('id-ID')}` : 'Select Item'}
                         </p>
                     </div>
                     <button
                         onClick={handleBuyNow}
-                        className="shrink-0 bg-pink-500 hover:bg-pink-600 text-white font-black px-6 sm:px-8 py-3 rounded-xl transition-all duration-200 shadow-lg hover:scale-105 flex items-center gap-2"
+                        className="shrink-0 bg-[#5F9598] hover:bg-[#47878a] text-white font-black px-6 sm:px-8 py-3 rounded-xl transition-all duration-200 shadow-lg hover:scale-105 flex items-center gap-2"
                     >
                         <CreditCard className="w-4 h-4" />
                         <span>Buy Now</span>
