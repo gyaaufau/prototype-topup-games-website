@@ -382,7 +382,12 @@ const Home = () => {
                         <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
                             Join thousands of satisfied gamers. Fast, secure, and reliable top-up service!
                         </p>
-                        <button className="bg-[#0a2838] hover:bg-[#1D546D] text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-2xl hover:scale-105 inline-flex items-center gap-2">
+                        <button
+                            className="text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-2xl hover:scale-105 inline-flex items-center gap-2"
+                            style={{ backgroundColor: 'var(--color-bg-card)' }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-secondary)'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-bg-card)'}
+                        >
                             <span>Start Top Up</span>
                             <ChevronRight className="w-5 h-5" />
                         </button>

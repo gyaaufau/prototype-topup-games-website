@@ -54,7 +54,7 @@ const Invoice = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#061E29] via-[#061E29] to-[#061E29] py-8">
+        <div className="min-h-screen py-8" style={{ backgroundColor: 'var(--color-bg-main)' }}>
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Success Message */}
                 <div className="text-center mb-8 animate-fade-in">
@@ -70,18 +70,18 @@ const Invoice = () => {
                 </div>
 
                 {/* Invoice Card */}
-                <div className=" rounded-2xl border border overflow-hidden shadow-2xl mb-6" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                <div className=" rounded-2xl border overflow-hidden shadow-2xl mb-6" style={{ backgroundColor: "var(--color-bg-card)", borderColor: "var(--color-border)" }}>
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-[#5F9598] to-[#1D546D] p-6 sm:p-8">
+                    <div className="p-6 sm:p-8" style={{ background: 'linear-gradient(to right, var(--color-primary), var(--color-secondary))' }}>
                         <div className="flex items-start justify-between">
                             <div>
                                 <h2 className="text-2xl sm:text-3xl font-black text-white mb-2">
                                     GyaStore
                                 </h2>
-                                <p className="text-[#d1e9eb] text-sm">Invoice / Receipt</p>
+                                <p className="text-white/80 text-sm">Invoice / Receipt</p>
                             </div>
                             <div className="text-right">
-                                <p className="text-[#d1e9eb] text-xs sm:text-sm font-semibold mb-1">Invoice No.</p>
+                                <p className="text-white/80 text-xs sm:text-sm font-semibold mb-1">Invoice No.</p>
                                 <div className="flex items-center gap-2">
                                     <span className="text-white font-bold text-sm sm:text-base">
                                         {invoiceNumber}
@@ -113,35 +113,35 @@ const Invoice = () => {
                         {/* Order Details */}
                         <div>
                             <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                                <div className="w-1 h-6 bg-gradient-to-b from-[#5F9598] to-[#1D546D] rounded-full"></div>
+                                <div className="w-1 h-6 rounded-full" style={{ background: 'linear-gradient(to bottom, var(--color-primary), var(--color-secondary))' }}></div>
                                 Order Details
                             </h3>
                             <div className="space-y-3">
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b pb-3" style={{ borderColor: 'var(--color-border)' }}>
                                     <span className="text-slate-400 text-sm">Game</span>
                                     <span className="text-white font-semibold text-sm text-right">
                                         {orderData.game}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b pb-3" style={{ borderColor: 'var(--color-border)' }}>
                                     <span className="text-slate-400 text-sm">Item</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.item}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b pb-3" style={{ borderColor: 'var(--color-border)' }}>
                                     <span className="text-slate-400 text-sm">User ID</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.userId}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b pb-3" style={{ borderColor: 'var(--color-border)' }}>
                                     <span className="text-slate-400 text-sm">Server ID</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.serverId}
                                     </span>
                                 </div>
-                                <div className="flex justify-between items-start border-b border pb-3">
+                                <div className="flex justify-between items-start border-b pb-3" style={{ borderColor: 'var(--color-border)' }}>
                                     <span className="text-slate-400 text-sm">Payment Method</span>
                                     <span className="text-white font-semibold text-sm">
                                         {orderData.payment}
@@ -168,10 +168,10 @@ const Invoice = () => {
                                     <span className="text-slate-400 text-sm">Discount</span>
                                     <span className="text-green-400 font-semibold">Rp 0</span>
                                 </div>
-                                <div className="border-t border-[#0f3447] pt-3 mt-3">
+                                <div className="border-t pt-3 mt-3" style={{ borderColor: 'var(--color-border)' }}>
                                     <div className="flex justify-between items-center">
                                         <span className="text-slate-300 font-bold text-base">Total Payment</span>
-                                        <span className="text-[#75bdc3] font-black text-xl sm:text-2xl">
+                                        <span className="font-black text-xl sm:text-2xl" style={{ color: 'var(--color-primary-light)' }}>
                                             Rp {orderData.price.toLocaleString('id-ID')}
                                         </span>
                                     </div>
@@ -192,7 +192,7 @@ const Invoice = () => {
                     </div>
 
                     {/* Footer */}
-                    <div className="/30 p-6 sm:p-8 border-t border" style={{ backgroundColor: "var(--color-secondary)" }}>
+                    <div className="p-6 sm:p-8 border-t" style={{ backgroundColor: 'var(--color-bg-secondary)', borderColor: 'var(--color-border)' }}>
                         <p className="text-slate-400 text-xs text-center">
                             Thank you for shopping at GyaStore! If you have any questions, please contact our customer service.
                         </p>
@@ -203,21 +203,52 @@ const Invoice = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
                     <button
                         onClick={handleDownload}
-                        className="flex items-center justify-center gap-2 bg-[#1D546D] hover: text-white font-semibold py-3 px-4 rounded-xl transition-all border border-[#0f3447] hover:border" style={{ backgroundColor: "var(--color-secondary)" }}
+                        className="flex items-center justify-center gap-2 text-white font-semibold py-3 px-4 rounded-xl transition-all border"
+                        style={{
+                            backgroundColor: "var(--color-bg-secondary)",
+                            borderColor: "var(--color-border)"
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
+                            e.currentTarget.style.borderColor = 'var(--color-primary)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
+                            e.currentTarget.style.borderColor = 'var(--color-border)';
+                        }}
                     >
                         <Download className="w-5 h-5" />
                         <span>Download</span>
                     </button>
                     <button
                         onClick={handleShare}
-                        className="flex items-center justify-center gap-2 bg-[#1D546D] hover: text-white font-semibold py-3 px-4 rounded-xl transition-all border border-[#0f3447] hover:border" style={{ backgroundColor: "var(--color-secondary)" }}
+                        className="flex items-center justify-center gap-2 text-white font-semibold py-3 px-4 rounded-xl transition-all border"
+                        style={{
+                            backgroundColor: "var(--color-bg-secondary)",
+                            borderColor: "var(--color-border)"
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
+                            e.currentTarget.style.borderColor = 'var(--color-primary)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
+                            e.currentTarget.style.borderColor = 'var(--color-border)';
+                        }}
                     >
                         <Share2 className="w-5 h-5" />
                         <span>Share</span>
                     </button>
                     <Link
                         to="/"
-                        className="flex items-center justify-center gap-2 bg-[#5F9598] hover:bg-[#47878a] text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-[#5F9598]/30"
+                        className="flex items-center justify-center gap-2 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg"
+                        style={{ backgroundColor: "var(--color-primary)" }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color-primary-hover)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color-primary)';
+                        }}
                     >
                         <Home className="w-5 h-5" />
                         <span>Back to Home</span>
@@ -225,23 +256,23 @@ const Invoice = () => {
                 </div>
 
                 {/* Additional Info */}
-                <div className="/50 backdrop-blur-sm border border rounded-xl p-4 sm:p-6" style={{ backgroundColor: "var(--color-bg-card)" }}>
+                <div className="backdrop-blur-sm border rounded-xl p-4 sm:p-6" style={{ backgroundColor: "rgba(var(--color-bg-card-rgb), 0.5)", borderColor: "var(--color-border)" }}>
                     <h4 className="text-white font-bold text-sm mb-3">📢 Important Notes:</h4>
                     <ul className="space-y-2 text-slate-400 text-xs sm:text-sm">
                         <li className="flex items-start gap-2">
-                            <span className="text-[#5F9598] mt-0.5">•</span>
+                            <span className="mt-0.5" style={{ color: 'var(--color-primary)' }}>•</span>
                             <span>Items will be delivered automatically to your game account</span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-[#5F9598] mt-0.5">•</span>
+                            <span className="mt-0.5" style={{ color: 'var(--color-primary)' }}>•</span>
                             <span>Please check your in-game inbox/mail if items don't appear immediately</span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-[#5F9598] mt-0.5">•</span>
+                            <span className="mt-0.5" style={{ color: 'var(--color-primary)' }}>•</span>
                             <span>Save this invoice for your records</span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-[#5F9598] mt-0.5">•</span>
+                            <span className="mt-0.5" style={{ color: 'var(--color-primary)' }}>•</span>
                             <span>Contact support if you don't receive your items within 1 hour</span>
                         </li>
                     </ul>

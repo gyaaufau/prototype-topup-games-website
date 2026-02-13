@@ -136,15 +136,15 @@ const Footer = () => {
                         <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact Us</h3>
                         <ul className="space-y-3">
                             <li className="flex items-start gap-2 text-slate-400 text-sm">
-                                <Mail className="w-4 h-4 mt-0.5 shrink-0 text-[#5F9598]" />
+                                <Mail className="w-4 h-4 mt-0.5 shrink-0" style={{ color: 'var(--color-primary)' }} />
                                 <span>support@gyastore.com</span>
                             </li>
                             <li className="flex items-start gap-2 text-slate-400 text-sm">
-                                <Phone className="w-4 h-4 mt-0.5 shrink-0 text-[#5F9598]" />
+                                <Phone className="w-4 h-4 mt-0.5 shrink-0" style={{ color: 'var(--color-primary)' }} />
                                 <span>+62 812-3456-7890</span>
                             </li>
                             <li className="flex items-start gap-2 text-slate-400 text-sm">
-                                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#5F9598]" />
+                                <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: 'var(--color-primary)' }} />
                                 <span>Jakarta, Indonesia</span>
                             </li>
                         </ul>
@@ -152,21 +152,36 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-6 border-t border-[#1D546D]">
+                <div className="pt-6 border-t" style={{ borderColor: 'var(--color-border)' }}>
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                         <p className="text-slate-400 text-sm text-center sm:text-left">
                             &copy; 2026 GyaStore. All rights reserved.
                         </p>
                         <div className="flex items-center gap-4 text-sm">
-                            <a href="#" className="text-slate-400 hover:text-[#75bdc3] transition-colors">
+                            <a
+                                href="#"
+                                className="text-slate-400 transition-colors"
+                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary-light)'}
+                                onMouseLeave={(e) => e.currentTarget.style.color = ''}
+                            >
                                 Privacy
                             </a>
                             <span className="text-slate-700">•</span>
-                            <a href="#" className="text-slate-400 hover:text-[#75bdc3] transition-colors">
+                            <a
+                                href="#"
+                                className="text-slate-400 transition-colors"
+                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary-light)'}
+                                onMouseLeave={(e) => e.currentTarget.style.color = ''}
+                            >
                                 Terms
                             </a>
                             <span className="text-slate-700">•</span>
-                            <a href="#" className="text-slate-400 hover:text-[#75bdc3] transition-colors">
+                            <a
+                                href="#"
+                                className="text-slate-400 transition-colors"
+                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary-light)'}
+                                onMouseLeave={(e) => e.currentTarget.style.color = ''}
+                            >
                                 Help
                             </a>
                         </div>
