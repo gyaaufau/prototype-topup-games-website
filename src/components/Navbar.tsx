@@ -42,16 +42,14 @@ const Navbar = () => {
                                 placeholder="Search your favorite games..."
                                 className="w-full text-white placeholder-slate-400 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:ring-2 transition-all border"
                                 style={{
-                                    backgroundColor: 'var(--color-secondary)',
-                                    borderColor: 'var(--color-bg-secondary)'
+                                    backgroundColor: 'var(--color-bg-secondary)',
+                                    borderColor: 'var(--color-border)'
                                 }}
                                 onFocus={(e) => {
                                     e.currentTarget.style.borderColor = 'var(--color-primary)';
-                                    e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
                                 }}
                                 onBlur={(e) => {
-                                    e.currentTarget.style.borderColor = 'var(--color-bg-secondary)';
-                                    e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
+                                    e.currentTarget.style.borderColor = 'var(--color-border)';
                                 }}
                             />
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5 group-focus-within:text-[var(--color-primary)]" />
@@ -93,11 +91,11 @@ const Navbar = () => {
                                 placeholder="Search games..."
                                 className="w-full text-white placeholder-slate-400 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:ring-2 border"
                                 style={{
-                                    backgroundColor: 'var(--color-secondary)',
-                                    borderColor: 'var(--color-bg-secondary)'
+                                    backgroundColor: 'var(--color-bg-secondary)',
+                                    borderColor: 'var(--color-border)'
                                 }}
                                 onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
-                                onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-bg-secondary)'}
+                                onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
                             />
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                         </div>

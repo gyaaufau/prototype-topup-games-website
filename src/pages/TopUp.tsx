@@ -202,14 +202,14 @@ const TopUp = () => {
                                         placeholder="Enter User ID"
                                         className="w-full text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 border transition-all"
                                         style={{
-                                            backgroundColor: 'var(--color-secondary)',
-                                            borderColor: 'var(--color-bg-secondary)'
+                                            backgroundColor: 'var(--color-bg-secondary)',
+                                            borderColor: 'var(--color-border)'
                                         }}
                                         onFocus={(e) => {
                                             e.currentTarget.style.borderColor = 'var(--color-primary)';
                                         }}
                                         onBlur={(e) => {
-                                            e.currentTarget.style.borderColor = 'var(--color-bg-secondary)';
+                                            e.currentTarget.style.borderColor = 'var(--color-border)';
                                         }}
                                     />
                                 </div>
@@ -226,14 +226,14 @@ const TopUp = () => {
                                         placeholder="Enter Server ID"
                                         className="w-full text-white placeholder-slate-500 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 border transition-all"
                                         style={{
-                                            backgroundColor: 'var(--color-secondary)',
-                                            borderColor: 'var(--color-bg-secondary)'
+                                            backgroundColor: 'var(--color-bg-secondary)',
+                                            borderColor: 'var(--color-border)'
                                         }}
                                         onFocus={(e) => {
                                             e.currentTarget.style.borderColor = 'var(--color-primary)';
                                         }}
                                         onBlur={(e) => {
-                                            e.currentTarget.style.borderColor = 'var(--color-bg-secondary)';
+                                            e.currentTarget.style.borderColor = 'var(--color-border)';
                                         }}
                                     />
                                 </div>
