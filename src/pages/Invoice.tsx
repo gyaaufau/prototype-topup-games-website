@@ -105,7 +105,7 @@ const Invoice = () => {
                     {/* Content */}
                     <div className="p-6 sm:p-8 space-y-6">
                         {/* Transaction Time */}
-                        <div className="/50 rounded-xl p-4" style={{ backgroundColor: "var(--color-secondary)" }}>
+                        <div className="/50 rounded-xl p-4" style={{ backgroundColor: "var(--color-bg-secondary)" }}>
                             <p className="text-slate-400 text-xs mb-1">Transaction Time</p>
                             <p className="text-white font-semibold text-sm">{transactionTime}</p>
                         </div>
@@ -151,7 +151,7 @@ const Invoice = () => {
                         </div>
 
                         {/* Payment Summary */}
-                        <div className="/50 rounded-xl p-4 sm:p-6" style={{ backgroundColor: "var(--color-secondary)" }}>
+                        <div className="/50 rounded-xl p-4 sm:p-6" style={{ backgroundColor: "var(--color-bg-secondary)" }}>
                             <h3 className="text-white font-bold text-lg mb-4">Payment Summary</h3>
                             <div className="space-y-3">
                                 <div className="flex justify-between">
@@ -209,11 +209,9 @@ const Invoice = () => {
                             borderColor: "var(--color-border)"
                         }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
                             e.currentTarget.style.borderColor = 'var(--color-primary)';
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
                             e.currentTarget.style.borderColor = 'var(--color-border)';
                         }}
                     >
@@ -228,11 +226,9 @@ const Invoice = () => {
                             borderColor: "var(--color-border)"
                         }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
                             e.currentTarget.style.borderColor = 'var(--color-primary)';
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
                             e.currentTarget.style.borderColor = 'var(--color-border)';
                         }}
                     >

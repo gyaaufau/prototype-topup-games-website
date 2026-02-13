@@ -256,20 +256,18 @@ const TopUp = () => {
                                         onClick={() => handleNominalClick(nominal)}
                                         className="rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 relative overflow-hidden"
                                         style={{
-                                            backgroundColor: 'var(--color-secondary)',
-                                            borderColor: formData.selectedNominal?.id === nominal.id ? 'var(--color-primary)' : 'var(--color-bg-secondary)',
+                                            backgroundColor: 'var(--color-bg-secondary)',
+                                            borderColor: formData.selectedNominal?.id === nominal.id ? 'var(--color-primary)' : 'var(--color-border)',
                                             boxShadow: formData.selectedNominal?.id === nominal.id ? '0 10px 15px -3px rgba(var(--color-primary-rgb), 0.2)' : 'none'
                                         }}
                                         onMouseEnter={(e) => {
                                             if (formData.selectedNominal?.id !== nominal.id) {
-                                                e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
-                                                e.currentTarget.style.borderColor = 'var(--color-border)';
+                                                e.currentTarget.style.borderColor = 'var(--color-secondary)';
                                             }
                                         }}
                                         onMouseLeave={(e) => {
                                             if (formData.selectedNominal?.id !== nominal.id) {
-                                                e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
-                                                e.currentTarget.style.borderColor = 'var(--color-bg-secondary)';
+                                                e.currentTarget.style.borderColor = 'var(--color-border)';
                                             }
                                         }}
                                     >
@@ -319,20 +317,18 @@ const TopUp = () => {
                                                         onClick={() => handlePaymentClick(payment)}
                                                         className="rounded-xl p-3 sm:p-4 border-2 transition-all duration-200 flex items-center gap-3 relative"
                                                         style={{
-                                                            backgroundColor: 'var(--color-secondary)',
-                                                            borderColor: formData.selectedPayment?.id === payment.id ? 'var(--color-primary)' : 'var(--color-bg-secondary)',
+                                                            backgroundColor: 'var(--color-bg-secondary)',
+                                                            borderColor: formData.selectedPayment?.id === payment.id ? 'var(--color-primary)' : 'var(--color-border)',
                                                             boxShadow: formData.selectedPayment?.id === payment.id ? '0 10px 15px -3px rgba(var(--color-primary-rgb), 0.2)' : 'none'
                                                         }}
                                                         onMouseEnter={(e) => {
                                                             if (formData.selectedPayment?.id !== payment.id) {
-                                                                e.currentTarget.style.backgroundColor = 'var(--color-bg-secondary)';
-                                                                e.currentTarget.style.borderColor = 'var(--color-border)';
+                                                                e.currentTarget.style.borderColor = 'var(--color-secondary)';
                                                             }
                                                         }}
                                                         onMouseLeave={(e) => {
                                                             if (formData.selectedPayment?.id !== payment.id) {
-                                                                e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
-                                                                e.currentTarget.style.borderColor = 'var(--color-bg-secondary)';
+                                                                e.currentTarget.style.borderColor = 'var(--color-border)';
                                                             }
                                                         }}
                                                     >
